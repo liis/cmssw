@@ -11,7 +11,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 # source
 readFiles = cms.untracked.vstring()
 #------------------------- define secondary files -----------------------------
-useSecFiles = False
+useSecFiles = True #needed for MakeTrackValTree (tracking particles)
 run_PSI     = True
 
 if not useSecFiles: #Use secondary files
@@ -105,40 +105,21 @@ process.ElectronChi2.nSigma = cms.double( nSigma )
 
 ########################################################################
 
-#process.GlobalPaositionSource = cms.ESSource("PoolDBESSource",
-#                                            process.CondDBSetup,
-#                                            # Reading from oracle (instead of Frontier) needs the following shell variable setting (in zsh):
-#                                            # export CORAL_AUTH_PATH=/afs/cern.ch/cms/DB/conddb
-#                                            # string connect = "oracle://cms_orcoff_int2r/CMS_COND_ALIGNMENT"
-#                                            # untracked uint32 authenticationMethod = 1
-#                                            toGet = cms.VPSet(cms.PSet(
-#    record = cms.string('GlobalPositionRcd'),
-#    tag = cms.string('IdealGeometry')
-#    )),
-#                                            connect = cms.string('sqlite_file:output.db')
-#                                            )
-
-
-
-
+process.load("RecoPixelVertexing.PixelLowPtUtilities.siPixelClusterShapeCache_cfi")
 
 process.printEventContent = cms.EDAnalyzer("EventContentAnalyzer")
 # sequence for re-running gsfTracking over RECO
 process.myGsfReco = cms.Sequence(
-########    process.localreco
     process.siPixelRecHits
     *process.siStripMatchedRecHits #make local hits
     *process.MeasurementTrackerEvent #ADD
-    *process.printEventContent
-    *process.initialStepClusters
+    *process.siPixelClusterShapeCache # needed to add when moving from CMSSW_7_1_0_pre5 to pre7
     *process.iterTracking
-#    *process.printEventContent
-#    process.electronSeedsSeq #ADD
-########    process.trackCollectionMerging  #REMOVE
-########    process.newCombinedSeeds* # contained in electronSeedSeq 
-#    *process.electronSeeds    #produced merged collection of TkDriven and Ecaldriven seeds
-#    process.electronCkfTrackCandidates*process.electronGsfTracks #run electron tracking
-########   process.mix
+    
+    *process.electronSeedsSeq #ADD
+    *process.electronSeeds    #produced merged collection of TkDriven and Ecaldriven seeds
+    *process.electronCkfTrackCandidates*process.electronGsfTracks #run electron tracking
+    #    *process.printEventContent
 )
 
 outdir = "out_tests/"
@@ -150,6 +131,11 @@ process.TFileService = cms.Service("TFileService", # if save
                                    )
 
 
+
+process.load("SimTracker.TrackAssociation.TrackAssociatorByHits_cfi")
+process.TrackAssociatorByHits.SimToRecoDenominator = cms.string("reco") #Quality_SimToReco = shared hits/#reco(or #sim)
+process.TrackAssociatorByHits.Quality_SimToReco = cms.double(0.75)
+#process.TrackAssociatorByHits.AbsoluteNumberOfHits = cms.bool(True)
 #---------------- high purity selection of reco::Tracks---------------
 process.load("PhysicsTools.RecoAlgos.recoTrackSelector_cfi")
 process.cutsRecoTracksHp = process.recoTrackSelector.clone()
@@ -159,20 +145,20 @@ process.cutsRecoTracksHp.maxAbsEta = cms.double(2.5)
 
 
 process.ValidationSelectors = cms.Sequence(
-        process.cutsRecoTracksHp
-            )
+    process.cutsRecoTracksHp
+    )
 
 #--------------------------- tree maker --------------------------
-#process.load("MakeTree.MakeTrackValTree.maketrackvaltree_cfi") # for writing output to a flat tree
+process.load("MakeTree.MakeTrackValTree.maketrackvaltree_cfi") # for writing output to a flat tree
 
 process.printEventContent = cms.EDAnalyzer("EventContentAnalyzer")
 
 # paths
 process.p = cms.Path(
     process.myGsfReco 
-#    process.ValidationSelectors * 
+    *process.ValidationSelectors
 #    process.printEventContent 
-#    process.trackValTreeMaker
+    *process.trackValTreeMaker
     )
 
 
