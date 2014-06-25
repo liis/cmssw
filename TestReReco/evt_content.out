@@ -1,0 +1,248 @@
+Writing output to file: out_tests/reGsfTracking_maxCand_6_MaxChi2_100_nSigma_4.root
+MSLayersKeeperX0DetLayer LAYERS: 
+Writing output to file: out_tests/reGsfTracking_maxCand_6_MaxChi2_100_nSigma_4.root
+MSLayersKeeperX0DetLayer LAYERS: 
+Writing output to file: out_tests/reGsfTracking_maxCand_6_MaxChi2_100_nSigma_4.root
+MSLayersKeeperX0DetLayer LAYERS: 
+ nr. electron seeds: 7
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 15.4023, eta = 0.838714, nr simhits = 1
+nr shared hits = 1, nr reco hits 17 matched reco pt = 15.4023, qoverp = -0.00223665, matched reco qoverp = -0.0451436
+shallallaa
+Found tracking particle with pt = 47.5627, eta = -1.37042, nr simhits = 1
+nr shared hits = 1, nr reco hits 14 matched reco pt = 47.5627, qoverp = 0.000100668, matched reco qoverp = 0.00637125
+shallallaa
+Found tracking particle with pt = 1.33968, eta = 0.473136, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 3
+ nr. electron seeds: 5
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 34.5416, eta = 1.29652, nr simhits = 1
+nr shared hits = 1, nr reco hits 12 matched reco pt = 34.5416, qoverp = 0.000217062, matched reco qoverp = 0.0203889
+shallallaa
+Found tracking particle with pt = 29.3032, eta = -0.477779, nr simhits = 1
+nr shared hits = 0, nr reco hits 15 matched reco pt = 29.3032, qoverp = -0.000934524, matched reco qoverp = -0.0287538
+nr. tracking particles: 2
+ nr. electron seeds: 9
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 1.08046, eta = 1.22155, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+shallallaa
+Found tracking particle with pt = 23.9972, eta = 0.161512, nr simhits = 1
+nr shared hits = 1, nr reco hits 15 matched reco pt = 23.9972, qoverp = 0.001692, matched reco qoverp = 0.0389101
+shallallaa
+Found tracking particle with pt = 1.37255, eta = 0.844663, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 3
+ nr. electron seeds: 9
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 46.8396, eta = 1.12817, nr simhits = 1
+nr shared hits = 1, nr reco hits 14 matched reco pt = 46.8396, qoverp = -0.000156459, matched reco qoverp = -0.0112158
+shallallaa
+Found tracking particle with pt = 45.7436, eta = 1.0937, nr simhits = 1
+nr shared hits = 1, nr reco hits 15 matched reco pt = 45.7436, qoverp = 0.0001734, matched reco qoverp = 0.0315278
+nr. tracking particles: 2
+ nr. electron seeds: 7
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 20.2931, eta = 1.33898, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+shallallaa
+Found tracking particle with pt = 131.924, eta = 0.046285, nr simhits = 1
+nr shared hits = 1, nr reco hits 17 matched reco pt = 131.924, qoverp = 5.73357e-05, matched reco qoverp = 0.00760303
+nr. tracking particles: 2
+ nr. electron seeds: 10
+ nr. tracks: 4
+shallallaa
+Found tracking particle with pt = 1.03254, eta = -1.85638, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 1
+ nr. electron seeds: 8
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 27.6788, eta = -0.246422, nr simhits = 1
+nr shared hits = 1, nr reco hits 16 matched reco pt = 27.6788, qoverp = -0.00122912, matched reco qoverp = -0.0309412
+shallallaa
+Found tracking particle with pt = 48.6116, eta = -1.67759, nr simhits = 1
+nr shared hits = 1, nr reco hits 21 matched reco pt = 48.6116, qoverp = 5.51625e-05, matched reco qoverp = 0.00719662
+shallallaa
+Found tracking particle with pt = 2.8533, eta = -1.45445, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 3
+ nr. electron seeds: 3
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 52.5857, eta = 2.10727, nr simhits = 1
+nr shared hits = 1, nr reco hits 17 matched reco pt = 52.5857, qoverp = 2.07602e-05, matched reco qoverp = 0.00351047
+shallallaa
+Found tracking particle with pt = 24.7135, eta = 0.303435, nr simhits = 1
+nr shared hits = 1, nr reco hits 16 matched reco pt = 24.7135, qoverp = -0.00149536, matched reco qoverp = -0.0440244
+shallallaa
+Found tracking particle with pt = 1.78685, eta = 1.42183, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 3
+ nr. electron seeds: 20
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 42.3537, eta = -1.98217, nr simhits = 1
+nr shared hits = 1, nr reco hits 19 matched reco pt = 42.3537, qoverp = -4.07622e-05, matched reco qoverp = -0.0067855
+shallallaa
+Found tracking particle with pt = 45.6702, eta = -1.65172, nr simhits = 1
+nr shared hits = 1, nr reco hits 20 matched reco pt = 45.6702, qoverp = 6.558e-05, matched reco qoverp = 0.00472572
+shallallaa
+Found tracking particle with pt = 1.25705, eta = 2.06659, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+shallallaa
+Found tracking particle with pt = 1.39254, eta = 2.06707, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+shallallaa
+Found tracking particle with pt = 2.91054, eta = 0.602016, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 5
+Writing output to file: out_tests/reGsfTracking_maxCand_6_MaxChi2_100_nSigma_4.root
+Writing output to file: out_tests/reGsfTracking_maxCand_6_MaxChi2_100_nSigma_4.root
+MSLayersKeeperX0DetLayer LAYERS: 
+simreccoll.size() = 2
+simreccollseed.size() = 1
+ nr. electron seeds: 7
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 15.4023, eta = 0.838714, nr simhits = 1
+nr shared hits = 1, nr reco hits 17 matched reco pt = 15.4023, qoverp = -0.00223665, matched reco qoverp = -0.0451436
+shallallaa
+Found tracking particle with pt = 47.5627, eta = -1.37042, nr simhits = 1
+nr shared hits = 1, nr reco hits 14 matched reco pt = 47.5627, qoverp = 0.000100668, matched reco qoverp = 0.00637125
+shallallaa
+Found tracking particle with pt = 1.33968, eta = 0.473136, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 3
+simreccoll.size() = 2
+simreccollseed.size() = 1
+ nr. electron seeds: 5
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 34.5416, eta = 1.29652, nr simhits = 1
+nr shared hits = 1, nr reco hits 12 matched reco pt = 34.5416, qoverp = 0.000217062, matched reco qoverp = 0.0203889
+shallallaa
+Found tracking particle with pt = 29.3032, eta = -0.477779, nr simhits = 1
+nr shared hits = 0, nr reco hits 15 matched reco pt = 29.3032, qoverp = -0.000934524, matched reco qoverp = -0.0287538
+nr. tracking particles: 2
+simreccoll.size() = 2
+simreccollseed.size() = 0
+ nr. electron seeds: 9
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 1.08046, eta = 1.22155, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+shallallaa
+Found tracking particle with pt = 23.9972, eta = 0.161512, nr simhits = 1
+nr shared hits = 1, nr reco hits 15 matched reco pt = 23.9972, qoverp = 0.001692, matched reco qoverp = 0.0389101
+shallallaa
+Found tracking particle with pt = 1.37255, eta = 0.844663, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 3
+simreccoll.size() = 2
+simreccollseed.size() = 0
+ nr. electron seeds: 9
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 46.8396, eta = 1.12817, nr simhits = 1
+nr shared hits = 1, nr reco hits 14 matched reco pt = 46.8396, qoverp = -0.000156459, matched reco qoverp = -0.0112158
+shallallaa
+Found tracking particle with pt = 45.7436, eta = 1.0937, nr simhits = 1
+nr shared hits = 1, nr reco hits 15 matched reco pt = 45.7436, qoverp = 0.0001734, matched reco qoverp = 0.0315278
+nr. tracking particles: 2
+simreccoll.size() = 1
+simreccollseed.size() = 0
+ nr. electron seeds: 7
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 20.2931, eta = 1.33898, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+shallallaa
+Found tracking particle with pt = 131.924, eta = 0.046285, nr simhits = 1
+nr shared hits = 1, nr reco hits 17 matched reco pt = 131.924, qoverp = 5.73357e-05, matched reco qoverp = 0.00760303
+nr. tracking particles: 2
+simreccoll.size() = 4
+simreccollseed.size() = 1
+ nr. electron seeds: 10
+ nr. tracks: 4
+shallallaa
+Found tracking particle with pt = 1.03254, eta = -1.85638, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 1
+Writing output to file: out_tests/reGsfTracking_maxCand_6_MaxChi2_100_nSigma_4.root
+MSLayersKeeperX0DetLayer LAYERS: 
+simreccoll.size() = 2
+simreccollseed.size() = 1
+ nr. electron seeds: 7
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 15.4023, eta = 0.838714, nr simhits = 1
+nr shared hits = 1, nr reco hits 17 matched reco pt = 15.4023, qoverp = -0.00223665, matched reco qoverp = -0.0451436
+shallallaa
+Found tracking particle with pt = 47.5627, eta = -1.37042, nr simhits = 1
+nr shared hits = 1, nr reco hits 14 matched reco pt = 47.5627, qoverp = 0.000100668, matched reco qoverp = 0.00637125
+shallallaa
+Found tracking particle with pt = 1.33968, eta = 0.473136, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 3
+simreccoll.size() = 2
+simreccollseed.size() = 1
+ nr. electron seeds: 5
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 34.5416, eta = 1.29652, nr simhits = 1
+nr shared hits = 1, nr reco hits 12 matched reco pt = 34.5416, qoverp = 0.000217062, matched reco qoverp = 0.0203889
+shallallaa
+Found tracking particle with pt = 29.3032, eta = -0.477779, nr simhits = 1
+nr shared hits = 0, nr reco hits 15 matched reco pt = 29.3032, qoverp = -0.000934524, matched reco qoverp = -0.0287538
+nr. tracking particles: 2
+simreccoll.size() = 2
+simreccollseed.size() = 0
+ nr. electron seeds: 9
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 1.08046, eta = 1.22155, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+shallallaa
+Found tracking particle with pt = 23.9972, eta = 0.161512, nr simhits = 1
+nr shared hits = 1, nr reco hits 15 matched reco pt = 23.9972, qoverp = 0.001692, matched reco qoverp = 0.0389101
+shallallaa
+Found tracking particle with pt = 1.37255, eta = 0.844663, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 3
+simreccoll.size() = 2
+simreccollseed.size() = 0
+ nr. electron seeds: 9
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 46.8396, eta = 1.12817, nr simhits = 1
+nr shared hits = 1, nr reco hits 14 matched reco pt = 46.8396, qoverp = -0.000156459, matched reco qoverp = -0.0112158
+shallallaa
+Found tracking particle with pt = 45.7436, eta = 1.0937, nr simhits = 1
+nr shared hits = 1, nr reco hits 15 matched reco pt = 45.7436, qoverp = 0.0001734, matched reco qoverp = 0.0315278
+nr. tracking particles: 2
+simreccoll.size() = 1
+simreccollseed.size() = 0
+ nr. electron seeds: 7
+ nr. tracks: 2
+shallallaa
+Found tracking particle with pt = 20.2931, eta = 1.33898, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+shallallaa
+Found tracking particle with pt = 131.924, eta = 0.046285, nr simhits = 1
+nr shared hits = 1, nr reco hits 17 matched reco pt = 131.924, qoverp = 5.73357e-05, matched reco qoverp = 0.00760303
+nr. tracking particles: 2
+simreccoll.size() = 4
+simreccollseed.size() = 1
+ nr. electron seeds: 10
+ nr. tracks: 4
+shallallaa
+Found tracking particle with pt = 1.03254, eta = -1.85638, nr simhits = 1
+nr shared hits = 0, nr reco hits 0 matched reco pt = -99, qoverp = -99, matched reco qoverp = -99
+nr. tracking particles: 1
