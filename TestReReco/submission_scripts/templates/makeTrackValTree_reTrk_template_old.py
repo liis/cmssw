@@ -6,8 +6,8 @@ runDigi = 1
 
 # message logger
 process.MessageLogger = cms.Service("MessageLogger",
-     default = cms.untracked.PSet( limit = cms.untracked.int32(-1) )
-)
+                                    default = cms.untracked.PSet( limit = cms.untracked.int32(-1) )
+                                    )
 
 # source
 readFiles = cms.untracked.vstring()
