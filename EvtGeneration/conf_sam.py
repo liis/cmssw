@@ -28,44 +28,44 @@ process.source = cms.Source("PoolSource",
 )
 
 # Production Info
-process.configurationMetadata = cms.untracked.PSet(
+process.configurationMetadata = cms.untracked.PSet( # ??
     version = cms.untracked.string('$Revision: 1.19 $'),
-    annotation = cms.untracked.string('step3 nevts:10'),
+    annotation = cms.untracked.string('step3 nevts:50'),
     name = cms.untracked.string('Applications')
     )
 
 
-process.RECODEBUGoutput = cms.OutputModule("PoolOutputModule",
-                                           splitLevel = cms.untracked.int32(0),
-                                           SelectEvents = cms.untracked.PSet(  SelectEvents = ( cms.vstring( 'reconstruction_step',))), 
-                                           eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
-                                           outputCommands = process.RECODEBUGEventContent.outputCommands,
-                                           fileName = cms.untracked.string('file:samtest_reco.root'),
-                                           dataset = cms.untracked.PSet(
-    filterName = cms.untracked.string(''),
-    dataTier = cms.untracked.string('GEN-SIM-RECO-RECODEBUG')
-    )
-                                           )
-
-
-#process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
-#                                         splitLevel = cms.untracked.int32(0),
-#                                         SelectEvents = cms.untracked.PSet(  SelectEvents = ( cms.vstring( 'reconstruction_step',))),
-#                                         eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
-#                                         outputCommands = process.RECODEBUGEventContent.outputCommands,
-#                                         fileName = cms.untracked.string('samtest_reco.root'),
-#                                         dataset = cms.untracked.PSet(
+#process.RECODEBUGoutput = cms.OutputModule("PoolOutputModule",
+#                                           splitLevel = cms.untracked.int32(0),
+#                                           SelectEvents = cms.untracked.PSet(  SelectEvents = ( cms.vstring( 'reconstruction_step',))), 
+#                                           eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
+#                                           outputCommands = process.RECODEBUGEventContent.outputCommands,
+#                                           fileName = cms.untracked.string('file:samtest_reco.root'),
+#                                           dataset = cms.untracked.PSet(
 #    filterName = cms.untracked.string(''),
-#    dataTier = cms.untracked.string('GEN-SIM-RECO')
+#    dataTier = cms.untracked.string('GEN-SIM-RECO-RECODEBUG')
 #    )
-#                                         )
-process.RECODEBUGoutput.outputCommands.append('keep *PSimHits_g4SimHits_*_*')
+#)
+
+process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
+                                         splitLevel = cms.untracked.int32(0),
+                                         SelectEvents = cms.untracked.PSet(  SelectEvents = ( cms.vstring( 'reconstruction_step',))),
+                                         eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
+                                         outputCommands = process.RECODEBUGEventContent.outputCommands,
+                                         fileName = cms.untracked.string('samtest_reco.root'),
+                                         dataset = cms.untracked.PSet(
+    filterName = cms.untracked.string(''),
+    dataTier = cms.untracked.string('GEN-SIM-RECO')
+    )
+                                         )
+process.RECOSIMoutput.outputCommands.append('keep *PSimHits_g4SimHits_*_*')
 
 # Other statements
 process.mix.playback = True
 #process.mix.digitizers = cms.PSet()
 process.mix.digitizers = cms.PSet(process.theDigitizersValid)
-for a in process.aliases: delattr(process, a)
+#for a in process.aliases: delattr(process, a) #?? #THIS IS GUILTY for the removal of "pixelDigiSimLink"
+
 process.RandomNumberGeneratorService.restoreStateLabel=cms.untracked.string("randomEngineStateProducer")
 from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run2_mc', '')
@@ -123,13 +123,13 @@ process.L1Reco_step = cms.Path(process.L1Reco)
 process.reconstruction_step = cms.Path(process.reconstruction)
 process.eventinterpretaion_step = cms.Path(process.EIsequence)
 process.endjob_step = cms.EndPath(process.endOfProcess)
-#process.RECOSIMoutput_step = cms.EndPath(process.RECOSIMoutput)
-process.RECODEBUGoutput_step = cms.EndPath(process.RECODEBUGoutput)
+process.RECOSIMoutput_step = cms.EndPath(process.RECOSIMoutput)
+#process.RECODEBUGoutput_step = cms.EndPath(process.RECODEBUGoutput)
 
 process.mixing = cms.Path(process.mix)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.mixing,process.raw2digi_step,process.L1Reco_step,process.reconstruction_step,process.eventinterpretaion_step,process.endjob_step,process.RECODEBUGoutput_step)
+process.schedule = cms.Schedule(process.mixing,process.raw2digi_step,process.L1Reco_step,process.reconstruction_step,process.eventinterpretaion_step,process.endjob_step,process.RECOSIMoutput_step)
 
 # Automatic addition of the customisation function from SLHCUpgradeSimulations.Configuration.postLS1Customs
 from SLHCUpgradeSimulations.Configuration.postLS1Customs import customisePostLS1
@@ -146,7 +146,7 @@ process = setCrossingFrameOn(process)
 print process.particleFlowClusterECAL.inputECAL
 
 # End of customisation functions
-if process.particleFlowClusterECAL.inputECAL.getModuleLabel()=="particleFlowClusterECALWithTimeSelected":
-    print "3D Timing: ON 3DTiming"
-else:
-    print "3D Timing: OFF"
+#if process.particleFlowClusterECAL.inputECAL.getModuleLabel()=="particleFlowClusterECALWithTimeSelected":
+#    print "3D Timing: ON 3DTiming"
+#else:
+ #   print "3D Timing: OFF"

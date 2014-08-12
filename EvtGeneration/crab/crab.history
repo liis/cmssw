@@ -1,0 +1,14 @@
+140718_193733: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -create -submit -cfg crab_genraw.cfg
+140718_193806: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -create -submit -cfg crab_genraw.cfg
+140718_193840: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -create -submit -cfg crab_genraw.cfg
+140718_193911: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -create -submit -cfg crab_genraw.cfg
+140718_194130: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -create -submit -cfg crab_genraw.cfg
+140718_194657: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -create -cfg crab_genraw.cfg
+140718_194751: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -create -cfg crab_genraw.cfg
+140718_194816: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -submit
+140718_195125: /swshare/CRAB/patchedT3/CRAB_2_9_1/python/crab.py -status
+140722_102933: /swshare/CRAB/patchedT3/CRAB_2_10_5/python/crab.py -status
+140722_103034: /swshare/CRAB/patchedT3/CRAB_2_10_5/python/crab.py -status
+140722_104247: /swshare/CRAB/patchedT3/CRAB_2_10_5/python/crab.py -create -submit -cfg crab_genraw.cfg
+140722_104604: /swshare/CRAB/patchedT3/CRAB_2_10_5/python/crab.py -create -submit -cfg crab_genraw.cfg
+140722_104833: /swshare/CRAB/patchedT3/CRAB_2_10_5/python/crab.py -create -submit -cfg crab_genraw.cfg
