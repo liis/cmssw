@@ -4,7 +4,7 @@ process = cms.Process("reGsfTracking")
 
 # message logger
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
-process.MessageLogger.cerr.FwkReport.reportEvery = 10
+process.MessageLogger.cerr.FwkReport.reportEvery = 1
 #process.MessageLogger = cms.Service("MessageLogger", #??
 #                                    default = cms.untracked.PSet( limit = cms.untracked.int32(300) )
 #                                    )
@@ -97,7 +97,9 @@ process.load("Configuration.StandardSequences.Reconstruction_cff")
 
 from SimGeneral.MixingModule.trackingTruthProducer_cfi import *
 
-#process.TrajectoryBuilderForElectrons.estimator = cms.string('Chi4A')
+process.TrajectoryBuilderForElectrons.estimator = cms.string('Chi2A') 
+# 'Chi2A' -- separate costum producer defined in /TrackingTools/KalmanUpdators/python/Chi2MeasurementEstimatorESProducer_cfi.py
+# TrajectoryBuilderForElectrons -- defined at TrackingTools/GsfTracking/python/CkfElectronCandidateMaker_cff.py: TrajectoryBuilderForElectrons =RecoTracker.CkfPattern.CkfTrajectoryBuilder_cfi.CkfTrajectoryBuilder.clone()
 
 maxCandDefault = 5
 maxChi2Default = 2000
