@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/slc6_amd64_gcc481/cms/cmssw/CMSSW_7_1_6/external/slc6_amd64_gcc481/bin/../../../../../../external/python/2.7.6/lib/python2.7/site.py", line 59, in <module>
+    """
+KeyboardInterrupt

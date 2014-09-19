@@ -1,0 +1,326 @@
+140812_214033: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -cfg crab_genraw.cfg
+140812_214412: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -submit
+140812_214547: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status
+140812_214700: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_genraw.cfg
+140813_091553: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status
+140813_091807: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput
+140813_091840: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status
+140813_091942: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 12-24, 14,18,2,4,6,9,19-20
+140813_092513: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status
+140813_092558: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 2,4,6,9
+140813_092635: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status
+140813_092726: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214033/
+140813_092800: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput -c crab_0_140812_214033/
+140813_092939: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status
+140813_102047: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_genraw.cfg
+140813_102244: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100/
+140813_104740: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100/
+140813_111036: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100/
+140813_111114: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput 10 -c crab_0_SingleElectronPt100/
+140813_111349: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_135048: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status crab_0_SingleElectronPt100/
+140813_135127: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -kill all -c crab_0_SingleElectronPt100/
+140813_135202: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -clean -c crab_0_SingleElectronPt100/
+140813_135919: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_genraw.cfg
+140813_140136: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100_ok/
+140813_164112: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_164144: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput -c crab_0_140812_214700/
+140813_164233: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_164310: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 18 -c crab_0_140812_214700/
+140813_172950: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_185202: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_185305: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput -c crab_0_140812_214700/
+140813_185336: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_185406: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 9 -c crab_0_140812_214700/
+140813_185453: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_140812_214700/
+140813_190243: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140813_190344: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140813_190911: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140813_191043: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -cfg crab_reco.cfg
+140813_191229: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_191744: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_191817: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput -c crab_0_140812_214700/
+140813_191906: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_140812_214700/
+140813_191942: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140813_192106: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt10_RECO/
+140813_223337: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140813_223424: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100_ok/
+140813_223540: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 75,95,182 -c crab_0_SingleElectronPt100_ok/
+140813_223612: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput -c crab_0_SingleElectronPt100_ok/
+140813_223837: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 75,95,182 -c crab_0_SingleElectronPt100_ok/
+140813_223919: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 3,34,77,84,87,105,131,134,139,146-147,157,168,197,199 -c crab_0_SingleElectronPt100_ok/
+140813_224038: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140813_224054: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140813_224111: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140813_224130: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -forceResubmit 24,174,181,184,189,191,193,6-7,19,49,53,137,60,101,103,109,114,124-125,31
+140813_224204: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140813_224225: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140813_224247: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -get all
+140813_224324: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140813_224336: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -forceResubmit 3,16,26,32
+140813_224408: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140813_224441: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt10_RECO/
+140813_224511: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronPt10_RECO/
+140813_233746: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_genraw.cfg
+140813_233948: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt/
+140813_234107: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140813_234123: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140813_234139: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140813_234157: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 37,181
+140813_234229: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140813_234247: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140813_234309: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140813_234332: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140813_234351: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -forceResubmit 60
+140813_234422: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140813_234443: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140813_234504: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -get all
+140813_234524: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140813_234540: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140814_091248: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140814_101126: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140814_101212: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140814_101300: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140814_101606: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140814_102837: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140814_102848: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -get all
+140814_102908: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140814_102919: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140814_102930: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_102951: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_103102: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_103122: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 1,8-9,14,29,41,50,72,94,105-106,122,149-150,154,177,180,182,80,133-134,138,7,21,33,43,49,56,60,152,57,6,27,25,70,108,114,140
+140814_103154: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_103214: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_103235: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140814_103347: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_103457: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -forceResubmit 42,24,31,101,124,184,189,19,137,174,181
+140814_103556: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_103616: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140814_103637: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -get all
+140814_103652: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140814_103713: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -forceResubmit 16
+140814_103742: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140814_105430: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140814_105443: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_140812_214700 -status
+140814_105454: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_105515: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_105539: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_105559: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 27,80,94,122,1,6-9,14,21,60,114
+140814_105630: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_105651: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_105712: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140814_105733: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_105755: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -forceResubmit 19,31,42,101,124,174,184,181
+140814_105826: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_105846: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140814_105903: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO -status
+140814_111032: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140812_214700/
+140814_111051: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_140812_214700/
+140814_112027: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt10_RECO/
+140814_112116: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -kill 16 -c crab_0_SingleElectronPt10_RECO/
+140814_112205: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140814_112357: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt10_RECO_v2/
+140814_112455: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_112516: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_112537: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_112556: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 6-7,8
+140814_112628: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_112647: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_112709: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140814_112729: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_112749: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -forceResubmit 42,19
+140814_112820: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_112843: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_112859: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_125754: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt/
+140814_125834: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_125853: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_125918: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_125939: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 72,7-8
+140814_130009: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_130027: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_130050: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140814_130110: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_130129: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -forceResubmit 189,125
+140814_130159: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_130219: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_130236: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -get all
+140814_130302: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_130320: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_133744: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_133811: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_133837: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_133900: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 25,80
+140814_133941: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_134004: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_134025: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_134048: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_134106: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -get all
+140814_134132: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_134152: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -forceResubmit 25
+140814_134203: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100_ok/
+140814_134222: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_134257: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 95 -c crab_0_SingleElectronPt100_ok/
+140814_134338: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -kill 95 -c crab_0_SingleElectronPt100_ok/
+140814_134354: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 95 -c crab_0_SingleElectronPt100_ok/
+140814_134549: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_134610: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_134625: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_134645: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_134706: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_134728: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140814_134744: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_134806: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -forceResubmit 189
+140814_134838: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_134900: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_134918: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_145036: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_145105: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_145130: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_145151: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 50
+140814_145223: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_145243: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_145304: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140814_145320: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_145339: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_145400: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_145418: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -get all
+140814_145434: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_145451: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -forceResubmit 7
+140814_145526: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_155140: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput 50 -c crab_0_SingleElectronFlatPt/
+140814_155210: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status
+140814_155332: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt/
+140814_155406: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_155428: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_155452: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_155512: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 50,152
+140814_155545: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_155605: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_155626: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140814_155648: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_155709: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_155729: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_155746: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -get all
+140814_155802: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_155819: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_161633: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_161656: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_161717: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_161739: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 152,72
+140814_161812: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_161833: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_161856: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_161919: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_161956: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -get all
+140814_162016: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_162030: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_230523: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt10_RECO_v2/
+140814_230601: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronPt10_RECO_v2/
+140814_230802: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_230825: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140814_230843: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_230853: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 72,15
+140814_230921: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140814_230938: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_230957: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -get all
+140814_231017: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_231035: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_ok -status
+140814_231052: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_231102: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140814_231125: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100_ok/
+140814_231143: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100_ok/
+140815_090851: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_0_SingleElectronFlatPt/
+140815_090910: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt/
+140815_091009: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100_ok/
+140815_091102: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 72 -c crab_0_SingleElectronFlatPt/
+140815_091133: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -get 72 -c crab_0_SingleElectronFlatPt/
+140815_091152: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt/
+140815_091208: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -resubmit 72 -c crab_0_SingleElectronFlatPt/
+140815_091257: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput -c crab_0_SingleElectronPt100_ok/
+140815_091321: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100_ok/
+140815_091355: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronPt100_ok/
+140815_091530: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_140815_090851/
+140815_091805: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140815_092031: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140815_092216: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt100_RECO/
+140815_092334: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt10_RECO_v2/
+140815_092356: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronPt10_RECO_v2/
+140815_092828: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronPt10_RECO_v2/
+140815_093815: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140815_093936: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput -c crab_0_SingleElectronFlatPt/
+140815_093941: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140815_094001: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -get all
+140815_094022: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140815_094035: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -forceResubmit 72
+140815_094106: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140815_094127: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140815_094142: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140815_094158: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140815_094211: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2 -status
+140815_094222: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140815_094240: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140815_094412: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt/
+140815_094443: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronFlatPt/
+140815_094931: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -create -submit -cfg crab_reco.cfg
+140815_095044: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt_RECO/
+140815_110709: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronPt10_RECO_v2new/
+140815_110924: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140815_110947: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140815_111008: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140815_111026: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -get all
+140815_111041: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140815_111057: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -forceResubmit 36
+140815_111121: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140815_111137: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140815_111155: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -get all
+140815_111230: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140815_111247: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -forceResubmit 31,35-36
+140815_111317: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140815_111333: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140815_111351: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -get all
+140815_111418: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140815_111436: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -forceResubmit 18-19,28
+140815_111510: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140815_195132: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt
+140815_195615: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -getoutput -c crab_0_SingleElectronFlatPt
+140815_195724: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronFlatPt
+140815_195936: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140815_195947: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt -status
+140815_195957: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140815_200014: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -get all
+140815_200049: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140815_200059: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -forceResubmit 14,26,28,33,39
+140815_200122: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140815_200135: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140815_200153: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -get all
+140815_200219: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140815_200229: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -forceResubmit 4-6,8,22
+140815_200300: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140815_200316: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140815_200335: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -get all
+140815_200357: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140815_200409: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -forceResubmit 16,39
+140815_200434: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140816_134416: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt
+140816_134438: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronFlatPt
+140816_134523: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140816_134541: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -get all
+140816_134559: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140816_134610: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140816_134620: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140816_134642: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -get all
+140816_134704: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140816_134714: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140816_134725: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140816_134747: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -get all
+140816_134805: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140816_134815: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt10_RECO_v2new -status
+140816_141222: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronFlatPt_RECO -status
+140816_141227: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -c crab_0_SingleElectronPt100_RECO -status
+140816_141237: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -status -c crab_0_SingleElectronFlatPt_RECO/
+140816_141258: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronFlatPt_RECO/
+140816_141337: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronPt100_RECO/
+140816_141423: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronPt10_RECO_v2new/
+140816_141455: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_6/python/crab.py -publish -c crab_0_SingleElectronPt100_RECO/
