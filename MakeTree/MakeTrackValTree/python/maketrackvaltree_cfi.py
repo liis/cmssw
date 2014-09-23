@@ -9,10 +9,16 @@ TrackingParticleSelectionForEfficiency.minHitTP = cms.int32(3)
 TrackingParticleSelectionForEfficiency.ptMinTP = cms.double(2)
 TrackingParticleSelectionForEfficiency.pdgIdTP = cms.vint32([-11, 11])
 
+
+import SimTracker.TrackAssociation.quickTrackAssociatorByHits_cfi 
+TrackAssociatorByHitsRecoDenom= SimTracker.TrackAssociation.quickTrackAssociatorByHits_cfi.quickTrackAssociatorByHits.clone(
+    ComponentName = cms.string('TrackAssociatorByHitsRecoDenom'),  
+    )
+
 trackValTreeMaker = cms.EDAnalyzer('MakeTrackValTree',                                   
                                    TrackingParticleSelectionForEfficiency, # default tracking particle selection tresholds
                                    
-                                   isGSF = cms.bool(True),
+                                   isGSF = cms.bool(False),
                                    trackLabelGSF = cms.InputTag("electronGsfTracks"),
                                    trackLabel = cms.InputTag("generalTracks"),
                                    elSeedLabel = cms.InputTag("electronMergedSeeds"),                      

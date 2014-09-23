@@ -56,7 +56,8 @@
 #include "SimDataFormats/TrackingAnalysis/interface/TrackingVertexContainer.h"
 
 #include "SimTracker/Common/interface/TrackingParticleSelector.h"
-#include "SimTracker/TrackAssociation/interface/TrackAssociatorByHits.h"
+//#include "SimTracker/TrackAssociation/interface/TrackAssociatorByHits.h"
+#include "SimTracker/TrackAssociation/interface/QuickTrackAssociatorByHits.h"
 #include "SimTracker/TrackerHitAssociation/interface/TrackerHitAssociator.h"
 #include "SimTracker/Records/interface/TrackAssociatorRecord.h"
 #include "SimTracker/TrackAssociation/plugins/ParametersDefinerForTPESProducer.h"
@@ -614,6 +615,13 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
    
    edm::Handle<edm::View<reco::Track> > trackCollection; //reconstructed tracks
    iEvent.getByLabel(track_label, trackCollection);
+
+   std::cout<<"Nr unfiltered reco tracks = " <<trackCollection->size() << std::endl;
+   
+   edm::Handle<edm::View<reco::Track> > filteredTrackCollection; //reconstructed tracks
+   iEvent.getByLabel("elTracksWithQuality", filteredTrackCollection);
+
+   std::cout<<"Nr filtered tracks = " <<filteredTrackCollection->size() << std::endl;
    
    edm::Handle<edm::View<reco::ElectronSeed> > elSeedCollection; 
    iEvent.getByLabel(el_seed_label_, elSeedCollection);
@@ -636,7 +644,7 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
    // Tracking particles
    edm::Handle<TrackingParticleCollection>  TPCollection ; //simulated tracks
    iEvent.getByLabel("mix","MergedTrackTruth",TPCollection);
-   //   std::cout<<"Number of TPs in the event = " << TPCollection->size() << std::endl;
+   std::cout<<"Number of TPs in the event = " << TPCollection->size() << std::endl;
    
    edm::Handle<TrackingVertexCollection> tvH; //For checking PU vertices
    iEvent.getByLabel("mix","MergedTrackTruth",tvH);
@@ -655,9 +663,11 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
    TrackingParticleSelector tpSelector = TrackingParticleSelector(ptMinTP, minRapidityTP, maxRapidityTP,tipTP, lipTP, minHitTP,signalOnlyTP, chargedOnlyTP, stableOnlyTP,pdgIdTP);
 
    edm::ESHandle<TrackAssociatorBase> myAssociator;
-   iSetup.get<TrackAssociatorRecord>().get("TrackAssociatorByHits", myAssociator);
+   //   iSetup.get<TrackAssociatorRecord>().get("TrackAssociatorByHits", myAssociator);
+   iSetup.get<TrackAssociatorRecord>().get("TrackAssociatorByHitsRecoDenom", myAssociator);
+
    reco::SimToRecoCollection simRecColl = myAssociator->associateSimToReco(trackCollection, TPCollection, &iEvent, &iSetup);
-   reco::RecoToSimCollection recSimColl = myAssociator->associateRecoToSim(trackCollection, TPCollection, &iEvent, &iSetup);
+   reco::RecoToSimCollection recSimColl = myAssociator->associateRecoToSim(filteredTrackCollection, TPCollection, &iEvent, &iSetup);
    hitAssociator = new TrackerHitAssociator(iEvent, conf_); //to access functions from the hitAsssociator code
 
    edm::ESHandle<ParametersDefinerForTP> parametersDefinerTP;
@@ -677,9 +687,9 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
 
      TrackingParticle::Point vertex = parametersDefinerTP->vertex(iEvent,iSetup,tpr);
      TrackingParticle::Vector momentum = parametersDefinerTP->momentum(iEvent,iSetup,tpr);
-
-     if( !tpSelector(*tp) ) continue;
-     if( tp->pt() < 2 ) continue; // such tracks are irrelevant for electrons
+	 
+	 //	 if( !tpSelector(*tp) ) continue;
+	 //if( tp->pt() < 2 ) continue; // such tracks are irrelevant for electrons
 
 	 //	 std::cout<<"found tracking particle nr "<<np_gen_+1<<"with pt = "<<tp->pt() <<", eta = "<<tp->eta() << ", phi = "<<tp->phi() << "nr hits = " <<tp->numberOfTrackerHits() << ", charge = " << tp->charge()<<std::endl;
 	 
@@ -696,6 +706,8 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
 	 gen_nr_simhits_[np_gen_] = tp->numberOfTrackerHits();
 	 gen_dxy_[np_gen_] = -vertex.x()*sin(momentum.phi()) + vertex.y()*cos(momentum.phi());
      gen_dz_[np_gen_] = vertex.z() - (vertex.x()*momentum.x()+vertex.y()*momentum.y())/sqrt(momentum.perp2())* momentum.z()/sqrt(momentum.perp2());	 
+
+	 //	 std::cout<<"distance from vertex dxy = "<<gen_dxy_[np_gen_]<<", from dz = "<<gen_dz_[np_gen_] << std::endl;
 	 
 	 for(std::vector<PSimHit>::const_iterator it_hit = simhits_TP.begin(); it_hit != simhits_TP.end(); it_hit++){ //get the fraction of brehmstrahlung at last hit
 	   if( it_hit+1 == simhits_TP.end() ){
@@ -775,16 +787,22 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
  
      }
 
-     
-     //check whether TP is from PU vertices
-     /*     double vtx_z_PU = vertexTP.z();
+     /*
+     // --> check whether TPs from PU vertices are present
+	 double vtx_z_TP = vertexTP.z();
+	 	 
+	 bool matchedToVertex = false;
      for (size_t j = 0; j < tv.size(); j++) {
-       if (tp->eventId().event() == tv[j].eventId().event()) {
-	 vtx_z_PU = tv[j].position().z();
-	 //	 std::cout<<"PU vertex -- with position: " << vtx_z_PU << std::endl; 
-       }
+	   double vtx_z_PU = tv[j].position().z();
+       if (tp->eventId().event() == tv[j].eventId().event() && vtx_z_TP == vtx_z_PU) {
+		 std::cout<<"TP mathced to PU vertex -- with position: " << vtx_z_PU << std::endl; 
+		 matchedToVertex = true;
+	   }
      }
-     */
+
+	 if( !matchedToVertex)
+	   std::cout<<"TP not matched to vertex" << std::endl;
+	 */	
      
      //     std::cout<<"Matched seed charge = "<<gen_matched_seed_okCharge_[np_gen_]<<", match quality = "<< gen_matched_seed_quality_[np_gen_]<<", nr matched seed hits = "<< gen_matched_seed_nshared_[np_gen_]<<std::endl;     
 
@@ -804,14 +822,13 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
    np_reco_toGen_ = 0;
    np_fake_ = 0;
    float pt_min_rectrk = 0; //applly the cut when making histograms
-   for( edm::View<reco::Track>::size_type i=0; i<trackCollection->size(); i++){
-     edm::RefToBase<reco::Track> track(trackCollection, i);
+   for( edm::View<reco::Track>::size_type i=0; i<filteredTrackCollection->size(); i++){
+     edm::RefToBase<reco::Track> track(filteredTrackCollection, i);
 	 
 	 if( track->pt() < 2 ) continue; // reduce noise, irrelevant for electrons
+	 //   	 if (!isGoodTrack(track, bsPosition, PV_points, false) ) continue;
+
 	 //	 std::cout<<"Found reco track with pt = " << track->pt() << " eta = " << track->eta() <<std::endl;
-	   
-	 if (!isGoodTrack(track, bsPosition, PV_points, false) ) continue;
-	 //	 std::cout<<"Track passed filtering!!!!" << std::endl;
 	 
      reco_pt_[np_reco_] = track->pt();
      reco_phi_[np_reco_] = track->phi();
@@ -833,6 +850,7 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
 		 //	 reco_nrSharedHits_[np_reco_] = tp.begin()->second;
 		 // reco_nrSimHits_[np_reco_] = (matchedTrackingParticle->trackPSimHit(DetId::Tracker) ).size();
        }
+	   //	   std::cout<<"Matched to a tracking particle with pt"<<std::endl;
      }
 
      else{  // if fake
@@ -856,6 +874,8 @@ MakeTrackValTree::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
    //  TrajectorySeed::range rechits = it_seed->recHits(); //get recHits associated to the seed
    // } //FIXME add fake seeds
 
+   std::cout<<"Nr of selected reco tracs = " << np_reco_ << std::endl;
+   std::cout<<"Nr of matched reco tracks = " << np_reco_toGen_ <<std::endl;
 
    trackValTree_->Fill();
 }

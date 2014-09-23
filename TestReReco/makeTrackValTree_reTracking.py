@@ -97,7 +97,7 @@ process.load("Configuration.StandardSequences.Reconstruction_cff")
 
 from SimGeneral.MixingModule.trackingTruthProducer_cfi import *
 
-process.TrajectoryBuilderForElectrons.estimator = cms.string('Chi2A') 
+#process.TrajectoryBuilderForElectrons.estimator = cms.string('Chi2A') #comment out for an alternative trajectory finder
 # 'Chi2A' -- separate costum producer defined in /TrackingTools/KalmanUpdators/python/Chi2MeasurementEstimatorESProducer_cfi.py
 # TrajectoryBuilderForElectrons -- defined at TrackingTools/GsfTracking/python/CkfElectronCandidateMaker_cff.py: TrajectoryBuilderForElectrons =RecoTracker.CkfPattern.CkfTrajectoryBuilder_cfi.CkfTrajectoryBuilder.clone()
 
@@ -105,9 +105,9 @@ maxCandDefault = 5
 maxChi2Default = 2000
 nSigmaDefault = 3.0
 
-maxCand = 6
-maxChi2 = 100
-nSigma = 4
+maxCand = maxCandDefault
+maxChi2 =maxChi2Default
+nSigma = nSigmaDefault
 
 ########################################################################
 # to change parameters  as in slides from A.Tropiano
@@ -124,7 +124,9 @@ process.printEventContent = cms.EDAnalyzer("EventContentAnalyzer")
 
 
 process.load("RecoTracker.FinalTrackSelectors.selectHighPurity_cfi")
-process.elGsfTracksWithQuality = process.selectHighPurity.clone(
+process.elTracksWithQuality = process.selectHighPurity.clone(
+    max_d0 = 0.02,
+    minNumberLayers = 10,
 #    src = "electronGsfTracks",
 #    src = "electronGsfTracks",
 )
@@ -143,7 +145,7 @@ process.myGsfReco = cms.Sequence(
     *process.electronSeeds    #produced merged collection of TkDriven and Ecaldriven seeds
     *process.electronCkfTrackCandidates
     *process.electronGsfTracks #run electron tracking
-#    *process.elGsfTracksWithQuality
+#    *process.elTracksWithQuality
 )
 
 outdir = "out_tests/"
@@ -185,10 +187,12 @@ process.printEventContent = cms.EDAnalyzer("EventContentAnalyzer")
 
 # paths
 process.p = cms.Path(
-    process.myGsfReco 
-    *process.ValidationSelectors
+#    process.myGsfReco 
+    process.ValidationSelectors
+    *process.elTracksWithQuality #preselection for standard reco tracks
 
     *process.preValidation
+
 #    *process.printEventContent 
     *process.trackValTreeMaker
     )
