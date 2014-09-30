@@ -28,7 +28,7 @@ process.maxEvents = cms.untracked.PSet(
 # Input source
 process.source = cms.Source("PoolSource",
     secondaryFileNames = cms.untracked.vstring(),
-    fileNames = cms.untracked.vstring('file:SingleElectronPt10_RAW.root')
+    fileNames = cms.untracked.vstring('file:SingleElectronPt100_RAW.root')
 )
 
 process.options = cms.untracked.PSet(
@@ -44,7 +44,7 @@ process.configurationMetadata = cms.untracked.PSet(
 
 # Output definition
 
-outfile="SingleElectronPt10_RECO.root"
+outfile="SingleElectronPt100_RECO.root"
 print "Saving output to: " + outfile
 
 process.RECODEBUGoutput = cms.OutputModule("PoolOutputModule",

@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: SingleElectronPt10_cfi --conditions PRE_STA71_V4::All -n 30 --eventcontent FEVTDEBUG --relval 9000,500 -s GEN,SIM,DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval,RAW2DIGI,L1Reco --datatier GEN-SIM-FEVTDEBUG --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1 --magField 38T_PostLS1 --io ./outfiles/testing/SingleElectronPt10_RAW.io --python ./conf_files_cmsdr/testing/SingleElectronPt10_RAW.py --fileout file:./outfiles/testing/SingleElectronPt10_RAW.root
+# with command line options: SingleElectronPt10_cfi --conditions PRE_STA71_V4::All -n 30 --eventcontent FEVTDEBUG --relval 9000,500 -s GEN,SIM,DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval,RAW2DIGI,L1Reco --datatier GEN-SIM-FEVTDEBUG --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1 --magField 38T_PostLS1 --io ./outfiles/testing/SingleElectronPt100_RAW.io --python ./conf_files_cmsdr/testing/SingleElectronPt10_RAW.py --fileout file:./outfiles/testing/SingleElectronPt10_RAW.root
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process('HLT')
@@ -30,10 +30,10 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(200)
+    input = cms.untracked.int32(2000)
 )
 
-process.MessageLogger.cerr.FwkReport.reportEvery = 1
+process.MessageLogger.cerr.FwkReport.reportEvery = 100
 
 # Input source
 process.source = cms.Source("EmptySource")
@@ -45,7 +45,7 @@ process.options = cms.untracked.PSet(
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
     version = cms.untracked.string('$Revision: 1.19 $'),
-    annotation = cms.untracked.string('SingleElectronPt10_cfi nevts:30'),
+    annotation = cms.untracked.string('SingleElectronPt100_cfi nevts:100'),
     name = cms.untracked.string('Applications')
 )
 
@@ -55,7 +55,7 @@ process.FEVTDEBUGoutput = cms.OutputModule("PoolOutputModule",
     splitLevel = cms.untracked.int32(0),
     eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
     outputCommands = process.FEVTDEBUGEventContent.outputCommands,
-    fileName = cms.untracked.string('file:SingleElectronPt10_RAW.root'),
+    fileName = cms.untracked.string('file:SingleElectronPt100_RAW.root'),
     dataset = cms.untracked.PSet(
         filterName = cms.untracked.string(''),
         dataTier = cms.untracked.string('GEN-SIM-FEVTDEBUG')
@@ -75,8 +75,8 @@ process.GlobalTag = GlobalTag(process.GlobalTag, 'PRE_STA71_V4::All', '')
 
 process.generator = cms.EDProducer("FlatRandomPtGunProducer",
     PGunParameters = cms.PSet(
-        MaxPt = cms.double(10.01),
-        MinPt = cms.double(9.99),
+        MaxPt = cms.double(100.01),
+        MinPt = cms.double(99.99),
         PartID = cms.vint32(11),
         MaxEta = cms.double(2.5),
         MaxPhi = cms.double(3.14159265359),
@@ -84,8 +84,8 @@ process.generator = cms.EDProducer("FlatRandomPtGunProducer",
         MinPhi = cms.double(-3.14159265359)
     ),
     Verbosity = cms.untracked.int32(0),
-    psethack = cms.string('single electron pt 10'),
-    AddAntiParticle = cms.bool(False), # if True make 2 back-to-back opposite chargetracks per event 
+    psethack = cms.string('single electron pt 100'),
+    AddAntiParticle = cms.bool(False),
     firstRun = cms.untracked.uint32(1)
 )
 

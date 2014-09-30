@@ -4,11 +4,9 @@ process = cms.Process("reGsfTracking")
 
 # message logger
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
-process.MessageLogger.cerr.FwkReport.reportEvery = 1
-#process.MessageLogger = cms.Service("MessageLogger", #??
-#                                    default = cms.untracked.PSet( limit = cms.untracked.int32(300) )
-#                                    )
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(500) )
+process.MessageLogger.cerr.FwkReport.reportEvery = 100
+
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
 
 # source
 readFiles = cms.untracked.vstring()
@@ -61,12 +59,12 @@ source = cms.Source ("PoolSource",
 #    'file:007CEDE1-B1D1-E311-9EC9-02163E00E9CC.root' 
 #    'file:step2.root'
 #    'file:samtest_reco.root'
-#    'file:SingleElectronPt10_RECO.root',
-    'file:test2_sam.root' ## the last one
+#    'file:test2_sam.root' ## the last one
 #    'file:../EvtGeneration/SingleElectronPt10_RECO.root'
+#    'file:test_sam_zee.root'
 #    'file:rawToReco.root'
 # -------- Zee produced by sam ----------------
-#        '/store/group/phys_egamma/sharper/DYJetsToLL_M-50_13TeV-pythia6/EGM711_PU40bx25_POSTLS171_V11_RECODEBUG-v1/ffac44eb0cb582bdcc6ecfb3c5f327a8/DYJetsToLL_M-50_13TeV-pythia6_EGM711_PU40bx25_POSTLS171_V11-v1_101_1_Fsb.root',
+        '/store/group/phys_egamma/sharper/DYJetsToLL_M-50_13TeV-pythia6/EGM711_PU40bx25_POSTLS171_V11_RECODEBUG-v1/ffac44eb0cb582bdcc6ecfb3c5f327a8/DYJetsToLL_M-50_13TeV-pythia6_EGM711_PU40bx25_POSTLS171_V11-v1_101_1_Fsb.root',
 #        '/store/group/phys_egamma/sharper/DYJetsToLL_M-50_13TeV-pythia6/EGM711_PU40bx25_POSTLS171_V11_RECODEBUG-v1/ffac44eb0cb582bdcc6ecfb3c5f327a8/DYJetsToLL_M-50_13TeV-pythia6_EGM711_PU40bx25_POSTLS171_V11-v1_100_2_qzC.root',
 #        '/store/group/phys_egamma/sharper/DYJetsToLL_M-50_13TeV-pythia6/EGM711_PU40bx25_POSTLS171_V11_RECODEBUG-v1/ffac44eb0cb582bdcc6ecfb3c5f327a8/DYJetsToLL_M-50_13TeV-pythia6_EGM711_PU40bx25_POSTLS171_V11-v1_102_1_VzM.root',
 #-----------------------------------------------
@@ -97,17 +95,15 @@ process.load("Configuration.StandardSequences.Reconstruction_cff")
 
 from SimGeneral.MixingModule.trackingTruthProducer_cfi import *
 
-process.TrajectoryBuilderForElectrons.estimator = cms.string('Chi2') #comment out for an alternative trajectory finder
-# 'Chi2A' -- separate costum producer defined in /TrackingTools/KalmanUpdators/python/Chi2MeasurementEstimatorESProducer_cfi.py
-# TrajectoryBuilderForElectrons -- defined at TrackingTools/GsfTracking/python/CkfElectronCandidateMaker_cff.py: TrajectoryBuilderForElectrons =RecoTracker.CkfPattern.CkfTrajectoryBuilder_cfi.CkfTrajectoryBuilder.clone()
+#process.TrajectoryBuilderForElectrons.estimator = cms.string('Chi4A')
 
 maxCandDefault = 5
 maxChi2Default = 2000
 nSigmaDefault = 3.0
 
-maxCand = maxCandDefault
-maxChi2 =maxChi2Default
-nSigma = nSigmaDefault
+maxCand = MAXCAND
+maxChi2 = MAXCHI2
+nSigma = NSIGMA
 
 ########################################################################
 # to change parameters  as in slides from A.Tropiano
@@ -124,9 +120,7 @@ process.printEventContent = cms.EDAnalyzer("EventContentAnalyzer")
 
 
 process.load("RecoTracker.FinalTrackSelectors.selectHighPurity_cfi")
-process.elTracksWithQuality = process.selectHighPurity.clone(
-    max_d0 = 0.02,
-    minNumberLayers = 10,
+process.elGsfTracksWithQuality = process.selectHighPurity.clone(
 #    src = "electronGsfTracks",
 #    src = "electronGsfTracks",
 )
@@ -145,7 +139,7 @@ process.myGsfReco = cms.Sequence(
     *process.electronSeeds    #produced merged collection of TkDriven and Ecaldriven seeds
     *process.electronCkfTrackCandidates
     *process.electronGsfTracks #run electron tracking
-#    *process.elTracksWithQuality
+#    *process.elGsfTracksWithQuality
 )
 
 outdir = "out_tests/"
@@ -177,18 +171,6 @@ process.ValidationSelectors = cms.Sequence(
 
 #--------------------------- tree maker --------------------------
 process.load("MakeTree.MakeTrackValTree.maketrackvaltree_cfi") # for writing output to a flat tree
-process.trackValTreeMaker.isGSF = cms.bool(True)
-process.trackValTreeMaker.isSinglePart = cms.bool(False)
-
-if process.trackValTreeMaker.isGSF:
-    print "Running analysis on electron GSF tracks"
-else:
-    print "Running analysis on generalTracks"
-if process.trackValTreeMaker.isSinglePart:
-    print "Assume SingleParticle datast and skip matching to leading vertex"
-else:
-    print "Require reco tracks to originate from the leading vertex"
-
 
 process.load("SimGeneral.TrackingAnalysis.simHitTPAssociation_cfi")
 process.preValidation = cms.Sequence(
@@ -201,9 +183,8 @@ process.printEventContent = cms.EDAnalyzer("EventContentAnalyzer")
 process.p = cms.Path(
     process.myGsfReco 
     *process.ValidationSelectors
-    *process.elTracksWithQuality #preselection for standard reco tracks
-    *process.preValidation
 
+    *process.preValidation
 #    *process.printEventContent 
     *process.trackValTreeMaker
     )
