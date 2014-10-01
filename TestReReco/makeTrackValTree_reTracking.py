@@ -4,7 +4,7 @@ process = cms.Process("reGsfTracking")
 
 # message logger
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
-process.MessageLogger.cerr.FwkReport.reportEvery = 1
+process.MessageLogger.cerr.FwkReport.reportEvery = 100
 #process.MessageLogger = cms.Service("MessageLogger", #??
 #                                    default = cms.untracked.PSet( limit = cms.untracked.int32(300) )
 #                                    )
@@ -177,7 +177,7 @@ process.ValidationSelectors = cms.Sequence(
 
 #--------------------------- tree maker --------------------------
 process.load("MakeTree.MakeTrackValTree.maketrackvaltree_cfi") # for writing output to a flat tree
-process.trackValTreeMaker.isGSF = cms.bool(True)
+process.trackValTreeMaker.isGSF = cms.bool(False)
 process.trackValTreeMaker.isSinglePart = cms.bool(False)
 
 if process.trackValTreeMaker.isGSF:
@@ -199,8 +199,8 @@ process.printEventContent = cms.EDAnalyzer("EventContentAnalyzer")
 
 # paths
 process.p = cms.Path(
-    process.myGsfReco 
-    *process.ValidationSelectors
+#    process.myGsfReco 
+    process.ValidationSelectors
     *process.elTracksWithQuality #preselection for standard reco tracks
     *process.preValidation
 

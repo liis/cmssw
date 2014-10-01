@@ -1,6 +1,6 @@
-import re, ntpath
+import re
 
-from collections import OrderedDict as dict
+from odict import OrderedDict as dict
 tracking_cfg_parameters = dict()
 
 tracking_cfg_parameters["maxCand"] = [5, 5, 5, 5, 5, 5 ]
@@ -26,32 +26,22 @@ def write_outfile(input, outname):
     out_file.write(input)
     out_file.close()
                     
-def create_crab_cfg_from_template(template, varstr, dataset, datasetname, isSinglePart, outdir = ""):
+def create_crab_cfg_from_template(template, varstr, dataset, outdir = ""):
     """
-    dataset = Pt100, Pt10, FlatPt
-    datasetname --> corresponding full datasetname
-    isSinglePart -- is it a singleParticle dataset (true) or with PU (false)
+    dotaset = Pt100, Pt10, FlatPt
     """
     input = read_template(template)
     input = input.replace("CUTVALS", varstr)    
     input = input.replace("DATASET", dataset)
-    input = input.replace("DSNAME", datasetname)
+    input = input.replace("DSNAME", datasetnames[dataset])
 
-    input = input.replace("OUTDIR", outdir)
     if len(outdir):
         outdir = outdir + "/"
 
-    if isSinglePart:
-        singlePartLabel = "_singlePart"
-        input = input.replace("EVTS_PER_JOB", "5000")
-    else:
-        singlePartLabel = ""
-        input = input.replace("EVTS_PER_JOB", "1500")
-
-    out_name = outdir + "crab_" + varstr + "_" + dataset + singlePartLabel +  ".cfg"
+    out_name = outdir + "crab_" + varstr + "_" + dataset + ".cfg"
     write_outfile(input, out_name)
 
-def create_cmssw_cfg_from_template(template, varstr, isSinglePart, isGSF=True, outdir = "", mode = "batch", dataset = "", infiles = [], infiles_sec = []):
+def create_cmssw_cfg_from_template(template, varstr, outdir = ""):
     """
     template -- template file name
     varstr -- string of variables and their values, separated by _
@@ -62,42 +52,14 @@ def create_cmssw_cfg_from_template(template, varstr, isSinglePart, isGSF=True, o
     input = input.replace("MAXCAND", varstr.rsplit("maxCand_")[1].rsplit("_")[0] )
     input = input.replace("MAXCHI2", varstr.rsplit("maxChi2_")[1].rsplit("_")[0] )
     input = input.replace("NSIGMA", varstr.rsplit("nSigma_")[1].rsplit("_")[0] )
-    input = input.replace("ISGSF", str(isGSF))
-    input = input.replace("ISSINGLEPART", str(isSinglePart))
 
-    #    if mode == "crab":
-    #        input = input.replace("OUTFILENAME", " 'trackValTree_reTrk.root' ")
-
-    if isSinglePart:
-        varstr = varstr+"_singlePart"
-        
-    if not mode == "crab":
-        input = input.replace("OUTFILENAME", " ' " + "../output_batch/trackValTree_" + dataset + "_" + varstr + ".root" + " ' ")
-
-        input = input.replace("INFILELIST", str(infiles))
-        input = input.replace("SECFILELIST", str(infiles_sec))
-                              
     if len(outdir):
         outdir = outdir + "/"
     out_name = outdir + "makeTrackValTree_reTrk_" + varstr + ".py"
     write_outfile(input, out_name)
-    return out_name
 
+#def make_varstrings( cfg_params ):
 
-def create_batch_submission_script(cmssw_cfg_file): # create .sh file to submit cmsRun job to batch
-    outname = cmssw_cfg_file.split(".py")[0] +".sh"
-    out_file = open(outname, "w")
-    
-    out_file.write("#!/bin/bash\n\n")
-
-    out_file.write('cd ${CMSSW_BASE}/src/TestReReco/submission_scripts/batch_jobs/input_batch \n')
-    out_file.write('eval `scramv1 runtime -sh`\n')
-    out_file.write("cmsRun " + ntpath.basename(cmssw_cfg_file) + "\n")
-    
-    out_file.close()
-
-    print "Saved submission script as: " + outname
-                        
 
 def create_varstrings(tracking_cfg_parameters, iter = 0, skip_default = True):
     """
@@ -116,5 +78,13 @@ def create_varstrings(tracking_cfg_parameters, iter = 0, skip_default = True):
         varstrings.append(varstr)
         
     return varstrings
+
+
+varstrings = create_varstrings(tracking_cfg_parameters, iter = len(tracking_cfg_parameters["maxCand"]), skip_default = False)
+
+for varstr in varstrings:
+    create_cmssw_cfg_from_template("./templates/makeTrackValTree_reTrk_template.py", varstr, outdir = "input_crab") # run both retracking and tree production
+    for datasetname in datasetnames:
+        create_crab_cfg_from_template("./templates/crab_template.cfg", varstr, dataset = datasetname, outdir = "input_crab")
     
        
