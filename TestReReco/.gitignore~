@@ -1,2 +1,5 @@
 *.root
 *.pyc
+submission_scripts/crab/output_crab/*
+*.log
+*.out
