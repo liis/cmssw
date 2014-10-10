@@ -10,15 +10,15 @@ is_gsf = True
 
 tracking_cfg_parameters = dict()
 # Chi2 scan
-tracking_cfg_parameters["maxCand"] = [5, 5, 5, 5]#, 5, 5 ]
-#tracking_cfg_parameters["maxChi2"] = [10, 30, 50, 100, 300, 2000]
-tracking_cfg_parameters["maxChi2"] = [2, 3, 5, 7]
-tracking_cfg_parameters["nSigma"] = [3, 3, 3, 3]#, 3, 3 ]
+tracking_cfg_parameters["maxCand"] = [5, 5, 5, 5, 5, 5, 5, 5, 5 ]
+tracking_cfg_parameters["maxChi2"] = [2, 5, 8, 10, 30, 50, 100, 300, 2000]
+#tracking_cfg_parameters["maxChi2"] = [2, 3, 5, 7]
+tracking_cfg_parameters["nSigma"] = [3, 3, 3, 3, 3, 3, 3, 3, 3 ]
 
 # Max cand scan
-#tracking_cfg_parameters["maxCand"] += [1, 2, 3, 4, 6, 7]
-#tracking_cfg_parameters["maxChi2"] += [2000, 2000, 2000, 2000, 2000, 2000]
-#tracking_cfg_parameters["nSigma"] += [3, 3, 3, 3, 3, 3]
+tracking_cfg_parameters["maxCand"] += [1, 2, 3, 4, 6, 7]
+tracking_cfg_parameters["maxChi2"] += [2000, 2000, 2000, 2000, 2000, 2000]
+tracking_cfg_parameters["nSigma"] += [3, 3, 3, 3, 3, 3]
 
 # nSigma scan
 #tracking_cfg_parameters["maxCand"] += [5, 5, 5, 5, 5]
